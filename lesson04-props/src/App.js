@@ -19,7 +19,7 @@ class App extends Component {
         price: "18000000",
         image:
           "https://sudospaces.com/mobilecity-vn/images/2019/12/galaxy-s7-gold.jpg",
-        status: false,
+        status: true,
       },
       {
         id: 3,
