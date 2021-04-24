@@ -3,14 +3,13 @@ import "./App.css";
 import Product from "./component/Product";
 
 class App extends Component {
-
   onClick() {
-    console.log('Đây là app component 1')
+    console.log("Đây là app component 1");
   }
 
   onClick2 = (text) => {
-    console.log(text)
-  }
+    console.log(text);
+  };
 
   render() {
     var products = [
@@ -41,8 +40,9 @@ class App extends Component {
     ];
 
     let elements = products.map((product) => {
+      let result = "";
       if (product.status) {
-        return (
+        result = (
           <Product
             key={product.id}
             name={product.name}
@@ -51,6 +51,7 @@ class App extends Component {
           />
         );
       }
+      return result;
     });
 
     return (
@@ -66,11 +67,17 @@ class App extends Component {
               {elements}
             </div>
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <button type="button" className="btn btn-warning" onClick={ this.onClick }>
-                Click Me !
+              <button
+                type="button"
+                className="btn btn-warning"
+                onClick={this.onClick}>
+                Click Me 1 !
               </button>
 
-              <button type="button" className="btn btn-warning" onClick={ () => this.onClick2('Hello World') }>
+              <button
+                type="button"
+                className="btn btn-warning"
+                onClick={() => this.onClick2("Hello World")}>
                 Click Me 2 !
               </button>
             </div>

@@ -32,8 +32,9 @@ class App extends Component {
     ];
 
     let elements = products.map((product, index) => {
+      let result = "";
       if (product.status) {
-        return (
+        result = (
           <Product
             key={product.id}
             name={product.name}
@@ -42,6 +43,7 @@ class App extends Component {
           />
         );
       }
+      return result;
     });
 
     return (

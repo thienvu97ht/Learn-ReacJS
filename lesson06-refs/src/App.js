@@ -67,7 +67,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-inverse">
           <a className="navbar-brand" href="/#">
-            Props
+            Refs
           </a>
         </nav>
         <div className="container">
